@@ -1,0 +1,92 @@
+import React, { Component } from "react";
+import Konva from "konva";
+import { render } from "react-dom";
+import { Stage, Layer, Rect, Transformer } from "react-konva";
+
+class ColoredRect extends React.Component {
+  handleTransform = () => {
+    console.log("transformed");
+    // we can read attrs here and send them to store
+  };
+
+  render() {
+    return (
+      <Rect
+        name={this.props.name}
+        x={this.props.x}
+        y={this.props.y}
+        width={50}
+        height={50}
+        fill={this.props.color}
+        onClick={this.handleClick}
+        onTransform={this.handleTransform}
+        draggable
+      />
+    );
+  }
+}
+
+class Handler extends React.Component {
+  componentDidMount() {
+    // not really "react-way". But it works.
+    const stage = this.transformer.getStage();
+    const rectangle = stage.findOne(".rectange-name");
+    this.transformer.attachTo(rectangle);
+    this.transformer.getLayer().batchDraw();
+  }
+  render() {
+    return (
+      <Transformer
+        ref={node => {
+          this.transformer = node;
+        }}
+      />
+    );
+  }
+}
+
+class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+
+  //   }
+
+  // }
+   handleClick = (e) => {
+     console.log(e)
+  }
+  state = {
+    rectangles: [
+      {
+        x:0,
+        y:0,
+        color: 'red',
+        name: 'rectange-name'
+      },
+      {
+        x: 0,
+        y: 0,
+        color: 'blue',
+        name: 'rect2'
+      }
+    ]
+  };
+  render() {
+    console.log(this.state.output)
+    const rects = this.state.rectangles.map(rect => <ColoredRect color={rect.color} name={rect.name} x={rect.x} y={rect.y}/>)
+    return (
+      <div>
+        <button onClick={(e) => this.handleClick(e)} >Click</button>
+        <Stage width={window.innerWidth} height={window.innerHeight}>
+          <Layer>
+            {rects}
+            <Handler />
+          </Layer>
+        </Stage>
+        </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById("root"));

@@ -1,0 +1,63 @@
+CACHE MANIFEST
+# 2018-03-01
+
+CACHE:
+
+# html
+index.html
+# css
+/autoknee/css/style.css
+# js
+applauncher.js
+appgui.js
+# images
+/autoknee/resources/help/double_tap.png
+/autoknee/resources/help/tap_and_hold.png
+/autoknee/resources/help/tap.png
+/autoknee/resources/help/touch_drag.png
+/autoknee/resources/help/twotouch_drag.png
+/autoknee/resources/help/twotouch_pinch.png
+
+# translations
+/autoknee/locales/de/translation.json
+/autoknee/locales/en/translation.json
+/autoknee/locales/fr/translation.json
+/autoknee/locales/ru/translation.json
+/autoknee/locales/zh/translation.json
+
+# third party
+
+# css
+/autoknee/ext/jquery-mobile/jquery.mobile-1.4.5.min.css
+/autoknee/ext/jquery-mobile/images/ajax-loader.gif
+/autoknee/ext/jquery-mobile/images/icons-svg/plus-white.svg
+/autoknee/ext/jquery-mobile/images/icons-svg/forward-white.svg
+/autoknee/ext/jquery-mobile/images/icons-svg/back-white.svg
+/autoknee/ext/jquery-mobile/images/icons-svg/info-white.svg
+/autoknee/ext/jquery-mobile/images/icons-svg/grid-black.svg
+/autoknee/ext/jquery-mobile/images/icons-png/plus-white.png
+/autoknee/ext/jquery-mobile/images/icons-png/forward-white.png
+/autoknee/ext/jquery-mobile/images/icons-png/back-white.png
+/autoknee/ext/jquery-mobile/images/icons-png/info-white.png
+/autoknee/ext/jquery-mobile/images/icons-png/grid-black.png
+
+# js
+/autoknee/ext/jquery/jquery-2.1.4.min.js
+/autoknee/ext/jquery-mobile/jquery.mobile-1.4.5.min.js
+/autoknee/ext/jquery-mobile/jquery.mobile-1.4.5.min.map
+/autoknee/ext/i18next/i18next.min.js
+/autoknee/ext/i18next/i18nextXHRBackend.min.js
+/autoknee/ext/i18next/i18nextBrowserLanguageDetector.min.js
+/autoknee/ext/pdfjs/jpx.js
+/autoknee/ext/pdfjs/arithmetic_decoder.js
+/autoknee/ext/pdfjs/decode-jpeg2000.js
+/autoknee/ext/pdfjs/util.js
+/autoknee/ext/pdfjs/jpg.js
+/autoknee/ext/pdfjs/decode-jpegbaseline.js
+/autoknee/ext/rii-mango/lossless-min.js
+/autoknee/ext/rii-mango/decode-jpegloss.js
+/autoknee/ext/konva/konva-1.6.0.min.js
+/autoknee/ext/magic-wand/magic-wand.js
+
+NETWORK:
+*
